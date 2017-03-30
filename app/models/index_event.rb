@@ -28,6 +28,7 @@ class IndexEvent < ActiveRecord::Base
       conn = Faraday.new(url) do |c|
         c.use Faraday::Response::RaiseError
         c.use Faraday::Adapter::NetHttp
+        c.options.timeout 120
       end
       JSON.parse(conn.get.body)
     end
