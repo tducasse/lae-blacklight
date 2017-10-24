@@ -15,7 +15,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-.byebug_history
 
 # Ignore coveralls /coverage
 /coverage
